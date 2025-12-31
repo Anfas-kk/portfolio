@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Frontend Development",
+    "description": "Responsive and modern websites using HTML, CSS, JavaScript, and UI frameworks.",
+    "iconClass": "bx bxl-dribbble",
+    "boxClass": "iconbox-blue"
+  },
+  {
+    "title": "Backend Development",
+    "description": "Server-side development using Python, PHP, and database integration.",
+    "iconClass": "bx bx-layer",
+    "boxClass": "iconbox-yellow"
+  },
+  {
+    "title": "UI / UX Design",
+    "description": "User-friendly interfaces with focus on usability, accessibility, and clean design.",
+    "iconClass": "fa-brands fa-apple",
+    "boxClass": "iconbox-red"
+  },
+  {
+    "title": "Web Design",
+    "description": "Creative and professional web designs tailored to client needs.",
+    "iconClass": "bx bx-slideshow",
+    "boxClass": "iconbox-teal"
+  }
+]

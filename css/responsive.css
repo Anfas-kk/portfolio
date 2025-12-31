@@ -1,0 +1,212 @@
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    
+    section {
+        padding: 10rem 5%;
+    }
+    
+    .home-img {
+        right: 5%;
+    }
+    .well_d, .about .about_me, .skills .skl {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 5%;
+    }
+    
+    .social-footer {
+        padding: 1% 5%;
+    }
+    
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 15rem;
+    }
+    
+    .wellcom {
+        max-width: 100%;
+        margin-bottom: 5rem;
+    }
+    
+    .home-img {
+        position: relative;
+        right: 0;
+        width: 90%;
+        height: auto;
+        margin-top: 5rem;
+    }
+    .home-img img {
+        padding-top: 0rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .heading {
+        font-size: 4rem;
+    }
+    
+    .well_b {
+        font-size: 6rem;
+    }
+    
+    .num_mail {
+        display: none;
+    }
+    
+    .c_text_main {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .quali .container {
+        width: 100%;
+        padding-left: 7rem;
+        padding-right: 2rem;
+    }
+    
+    .quali .right {
+        left: 0;
+    }
+    
+    .quali .timeline::after {
+        left: 3.1rem;
+    }
+    
+    .quali .container::after {
+        left: 2.3rem;
+    }
+
+    .theme-toggle {
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .c_text_main {
+        flex-direction: column;
+    }
+    
+    .c_text {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .well_b {
+        font-size: 4.5rem;
+    }
+    
+    .social-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+    
+    .well_b {
+        font-size: 5rem;
+    }
+    
+    .about .about_img {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .icon-box {
+        width: 100%;
+    }
+    
+    .social_icon a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+@media(max-width:1180px){
+    .num_mail p {
+        margin-right: 1px;
+    }
+}
+@media (max-width: 1124px) {
+    section {
+    min-height: 100vh;
+    }
+    .num_mail p {
+        margin-right: 2rem;
+    }
+    .menu-list {
+        width: 0;
+        opacity: 0;
+    }
+    
+    .menu-list.active {
+        width: 25rem;
+        opacity: 1;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (min-width: 1125px) {
+    /* If you want to keep menu always visible on larger screens */
+    .menu-list {
+        position: relative;
+        width: auto;
+        height: auto;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    
+    .menu-list a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* alert box */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
