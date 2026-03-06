@@ -148,6 +148,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Load Projects from JSON
+
+    fetch("data/projects.json")
+    .then(response => response.json())
+    .then(projects => {
+
+        const container = document.getElementById("projectsContainer");
+
+        if (!container) return;
+
+        projects.forEach(project => {
+
+            const projectCard = document.createElement("div");
+
+            projectCard.className = "project-card";
+
+            projectCard.innerHTML = `
+            
+                <h3>${project.title}</h3>
+
+                <p>${project.description}</p>
+
+                <div class="project-links">
+
+                    <a href="${project.github}"
+                    target="_blank"
+                    class="btn">
+
+                    GitHub
+
+                    </a>
+
+                </div>
+
+            `;
+
+            container.appendChild(projectCard);
+
+        });
+
+    })
+    .catch(error => console.error("Projects load error:", error));
     
     // Load services from JSON
     fetch('data/services.json')
@@ -180,6 +223,58 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error loading services:', error);
     });
 
+
+    // Load Skills
+
+    fetch("data/skills.json")
+    .then(response => response.json())
+    .then(data => {
+
+        const leftContainer = document.getElementById("skills-left");
+        const rightContainer = document.getElementById("skills-right");
+
+        function createSkill(skill) {
+            return `
+            <div class="progress">
+                <span class="skill">
+                    ${skill.name}
+                    <i class="val">${skill.percent}%</i>
+                </span>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            `;
+        }
+
+        data.leftColumn.forEach(skill => {
+            leftContainer.innerHTML += createSkill(skill);
+        });
+
+        data.rightColumn.forEach(skill => {
+            rightContainer.innerHTML += createSkill(skill);
+        });
+
+
+        /* FIXED ANIMATION */
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        progressBars.forEach(bar => {
+            const value = bar.parentElement
+                .previousElementSibling
+                .querySelector('.val').textContent;
+
+            bar.style.width = "0%";
+
+            setTimeout(() => {
+                bar.style.transition = "width 1.5s ease";
+                bar.style.width = value;
+            }, 300);
+        });
+
+    })
+    .catch(error => console.error("Skills load error:", error));
+    
     // Call setActiveMenuItem on page load and scroll
     setActiveMenuItem();
     window.addEventListener('scroll', setActiveMenuItem);
@@ -310,10 +405,15 @@ function showAlert(message) {
     alertBox.classList.add("active");
 }
 
-document.getElementById("alertClose").addEventListener("click", () => {
-    document.getElementById("customAlert").classList.remove("active");
-});
 
+// SAFE VERSION
+const alertClose = document.getElementById("alertClose");
+
+if (alertClose) {
+    alertClose.addEventListener("click", () => {
+        document.getElementById("customAlert").classList.remove("active");
+    });
+}
 
 // Form Submission
 
