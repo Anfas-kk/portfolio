@@ -9,6 +9,8 @@
     --black: #000000;
     --greyLight-3: #c8d0e7;
     --white: #FFFFFF;
+
+    --box-grey:rgba(255, 255, 255, 0.03);
 }
 * {
     margin: 0;
@@ -18,12 +20,16 @@
     scroll-behavior: smooth;
 }
 body.light-mode {
-    --primary-color: #ffeb00;
+    --primary-color: #d94100df;
     --secondary-color: #efefef;
     --header-color: #efefefd8;
     --text-color: #272727;
     --text-muted: #555555;
     --box-color:rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .fa-xmark {
+    color: #ffffff;
 }
 
 html {
@@ -92,6 +98,7 @@ header {
     opacity: 0;
     transform: translateX(3rem);
     animation: fadeIn 0.8s forwards 0.5s;
+    
 }
 
 .hed {
@@ -242,7 +249,7 @@ header {
     right: 0;
     width: 0;
     height: 100vh;
-    background: none;
+    background-color: rgba(35, 35, 35, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -434,51 +441,6 @@ header {
     color: var(--primary-color);
 }
 
-.well_c {
-    margin-top: 6rem;
-}
-
-.well_c a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 3rem;
-    background: transparent;
-    border: 1px solid var(--primary-color);
-    border-radius: 30%;
-    color: var(--primary-color);
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.well_c a i {
-    font-size: 1.8rem;
-}
-
-.well_c a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ff0000;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.well_c a:hover {
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-}
-
-.well_c a:hover::before {
-    width: 100%;
-}
-
 .home-img {
     position: absolute;
     top: 0;
@@ -624,7 +586,7 @@ box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(
 }
 
 .project-card {
-    background: var(--box-color);
+    background: var(--box-grey);
     padding: 3rem;
     width: 32rem;
     border-radius: 1rem;
@@ -655,6 +617,7 @@ box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    padding-top: 10px;
 }
 
 /* Qualification Section */
@@ -739,7 +702,7 @@ box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(
 .quali .content {
     position: relative;
     padding: 1.5rem;
-    background:var(--box-color);
+    background:var(--box-grey);
     border-radius: 0.6rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     transition: 0.3s;
@@ -956,7 +919,7 @@ box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(
     text-align: center;
     padding: 3rem 2rem;
     width: 30rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--box-grey);
     border-radius: 1rem;
     transition: all 0.3s ease;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
