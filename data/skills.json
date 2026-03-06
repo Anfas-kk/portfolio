@@ -1,0 +1,42 @@
+{
+  "leftColumn": [
+    {
+      "name": "HTML",
+      "percent": 90
+    },
+    {
+      "name": "CSS",
+      "percent": 85
+    },
+    {
+      "name": "JavaScript",
+      "percent": 70
+    },
+    {
+      "name": "Bootstrap",
+      "percent": 80
+    },
+    {
+      "name": "Git & GitHub",
+      "percent": 70
+    }
+  ],
+  "rightColumn": [
+    {
+       "name": "React",
+      "percent": 75
+    },
+    {
+      "name": "Nodejs",
+      "percent": 70
+    },
+    {
+      "name": "Python",
+      "percent": 70
+    },
+    {
+      "name": "Django",
+      "percent": 60
+    }
+  ]
+}

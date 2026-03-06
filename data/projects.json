@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Personal Portfolio",
+    "description": "Responsive portfolio website built using HTML, CSS, and JavaScript with dark/light mode, animations, and JSON-based services.",
+    "github": "https://github.com/Anfas-kk/portfolio"
+  },
+  {
+    "title": "Secure Federated Learning",
+    "description": "Federated Learning framework with Differential Privacy and Homomorphic Encryption using PyTorch.",
+    "github": "https://github.com/Anfas-kk"
+  },
+  {
+    "title": "Profile Card",
+    "description": "Responsive profile card built using HTML, CSS, and JavaScript with clean layout, hover effects, and smooth animations.",
+    "github": "https://github.com/Anfas-kk/Profile_card"
+  },
+  {
+    "title": "Clock Animation",
+    "description": "Animated analog clock built using HTML, CSS, and JavaScript demonstrating smooth transitions and real-time updates.",
+    "github": "https://github.com/Anfas-kk/Clock-animation"
+  }
+]
