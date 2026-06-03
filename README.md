@@ -97,12 +97,6 @@ The contact form is integrated with **EmailJS**, allowing real email submissions
 
 ---
 
-## 🔗 Live Demo
-
-(You can add your GitHub Pages link here later)
-
----
-
 ## 👤 Author
 
 **Anfas K K**
